@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Anniversary</title>
+  <link rel="stylesheet" href="anniversary.css" />
+  <link rel="icon" type="image/x-icon" href="FlowerIcon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1>HAPPY ANNIVERSARY</h1>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <!-- Mobile button box -->
+    <div class="mobile-hidden" id="mobileMenu">
+      <button onclick="loadContent(1)">First</button>
+      <button onclick="loadContent(2)">Second</button>
+      <button onclick="loadContent(3)">Third</button>
+      <button onclick="loadContent(4)">Fourth</button>
+      <button onclick="loadContent(5)">Fifth</button>
+      <button onclick="loadContent(6)">Sixth</button>
+      <button onclick="loadContent(7)">Seventh</button>
+      <button onclick="loadContent(8)">Eighth</button>
+      <button onclick="loadContent(9)">Ninth</button>
+      <button onclick="loadContent(10)">Tenth</button>
+      <button onclick="loadContent(11)">Eleventh</button>
+      <button onclick="loadContent(12)">Twelfth</button>
+      <button onclick="loadContent(13)">Anniversary</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Desktop button box -->
+    <div class="desktop-only">
+      <button onclick="loadContent(1)">First</button>
+      <button onclick="loadContent(2)">Second</button>
+      <button onclick="loadContent(3)">Third</button>
+      <button onclick="loadContent(4)">Fourth</button>
+      <button onclick="loadContent(5)">Fifth</button>
+      <button onclick="loadContent(6)">Sixth</button>
+      <button onclick="loadContent(7)">Seventh</button>
+      <button onclick="loadContent(8)">Eighth</button>
+      <button onclick="loadContent(9)">Ninth</button>
+      <button onclick="loadContent(10)">Tenth</button>
+      <button onclick="loadContent(11)">Eleventh</button>
+      <button onclick="loadContent(12)">Twelfth</button>
+      <button onclick="loadContent(13)">Anniversary</button>
+    </div>
+
+    <div class="background"></div>
+
+    <div class="content-box">
+      <h2 id="month-title"></h2>
+      <h3 id="month-subtitle" style="color: #ff69b4;"></h3>
+      <div class="media-box">
+        <div class="video-box" id="video-container"></div>
+        <div class="gif-box" id="gif-container"></div>
+      </div>
+      <div class="text-box" id="text-container"></div>
+    </div>
+  </div>
+
+  <script src="anniversary.js"></script>
+</body>
+</html>

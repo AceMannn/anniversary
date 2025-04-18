@@ -1,0 +1,317 @@
+/* ========== Global Styles ========== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ========== Body Styles ========== */
+body {
+    background-color: #fff0f5;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* ========== Background ========== */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./sweet-dreams.gif) no-repeat center center;
+    background-size: cover;
+    z-index: -1; 
+}
+
+/* ========== Main Container Layout ========== */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1500px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ========== Desktop Button Section ========== */
+.desktop-only {
+    flex: 1 1 300px;
+    max-width: 400px;
+    height: 790px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    border: 2px solid #e91e63;
+    border-radius: 12px;
+    background-color: #fce4ec;
+}
+
+/* ========== Buttons in Desktop View ========== */
+.desktop-only button {
+    padding: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+    transition: transform 0.15s ease, background-color 0.3s ease;
+}
+
+.desktop-only button:active {
+    transform: scale(0.95);
+    background-color: #c2185b !important;
+}
+
+/* ========== Button Color Scheme ========== */
+.desktop-only button:nth-child(n) {
+    background: #f48fb1;
+}
+
+/* ========== Special Style for Anniversary Button ========== */
+.desktop-only button:nth-child(13),
+.mobile-hidden button:nth-child(13) {
+    background: #ff0000 !important; 
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+    grid-column: span 2; 
+    font-size: 28px; 
+    padding: 12px; 
+}
+
+.desktop-only button:nth-child(13):hover,
+.mobile-hidden button:nth-child(13):hover {
+    background: #ff3333 !important;
+}
+
+.desktop-only button:nth-child(13):active,
+.mobile-hidden button:nth-child(13):active {
+    background: #cc0000 !important;
+}
+
+/* ========== Content Box Area ========== */
+.content-box {
+    flex: 1 1 500px;
+    max-width: 700px;
+    height: auto;
+    background-color: #fff0f5;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #e91e63;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.15);
+}
+
+/* ========== Month Title ========== */
+#month-title {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #d81b60;
+    font-size: 3rem;
+}
+
+/* ========== Month Subtitle ========== */
+#month-subtitle {
+    text-align: center;
+    margin-top: 10px; 
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #ff69b4; 
+}
+
+/* ========== Media Box (Video + GIF) ========== */
+.media-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+/* ========== Individual Media Containers ========== */
+.video-box,
+.gif-box {
+    flex: 1 1 48%;
+    min-height: 180px;
+    background-color: #fce4ec;
+    border: 2px solid #f06292;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+/* ========== GIF Styling ========== */
+.month-gif {
+    max-width: 100%;
+    max-height: 250px;
+    height: auto;
+}
+
+/* ========== Video Styling ========== */
+.month-video {
+    width: 100%;
+    max-height: 270px;
+    height: 500px;
+    border-radius: 1rem; 
+    object-fit: cover; 
+}
+
+/* ========== Text Area ========== */
+.text-box {
+    min-height: 100px;
+    height: 300px;
+    background-color: #fff8e1;
+    border: 2px solid #f06292;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 23px;
+    text-align: justify;
+    color: #4e342e;
+    overflow-y: auto;
+}
+
+/* ========== Custom Scrollbar Styling ========== */
+.text-box::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 10px;
+}
+
+.text-box::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.text-box::-webkit-scrollbar-thumb {
+    background-color: #f06292;
+    border-radius: 10px;
+}
+
+/* ========== Navigation Bar ========== */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lobster", sans-serif;
+    margin: 0 auto;
+    max-width: 1120px;
+    background-color: #fce4ec;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 2px solid #e91e63;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.1);
+    margin-bottom: 10px;
+}
+
+.navbar > h1 {
+    font-size: 50px;
+    font-family: "Lobster", sans-serif;
+}
+
+/* ========== Hamburger Menu Button ========== */
+.menu-toggle {
+    display: none;
+    background-color: #f06292;
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ========== Hidden Mobile Menu (Initially Hidden) ========== */
+.mobile-hidden {
+    display: none;
+}
+
+/* ========== Responsive Styles for Mobile Devices ========== */
+@media (max-width: 768px) {
+    
+    /* Stack Layout for Small Screens */
+    .container {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    /* Buttons Box for Mobile View */
+    .buttons-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        width: 280px;
+    }
+
+    /* Full-width Content Box on Mobile */
+    .content-box {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Shorter Text Box for Mobile */
+    .text-box {
+        font-size: 15px;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    /* Hide Desktop Button Panel */
+    .desktop-only {
+        display: none;
+    }
+
+    /* Show Menu Button on Mobile */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Smaller Navbar Text on Mobile */
+    .navbar > h1 {
+        font-size: 20px;
+        font-family: "Lobster", sans-serif;
+        padding-right: 15px;
+    }
+
+    /* Expanded Mobile Menu (Visible When Toggled) */
+    .mobile-hidden.show {
+        flex: 1 1 300px;
+        max-width: 350px;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 20px;
+        border: 2px solid #e91e63;
+        border-radius: 12px;
+        background-color: #fce4ec;
+    }
+
+    /* Buttons in Mobile Menu */
+    .mobile-hidden button {
+        padding: 15px;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        color: #fff;
+        transition: transform 0.15s ease, background-color 0.3s ease;
+    }
+
+    .mobile-hidden button:active {
+        transform: scale(0.95);
+        background-color: #c2185b !important;
+    }
+
+    .mobile-hidden button:nth-child(n) {
+        background: #f48fb1;
+    }
+}
